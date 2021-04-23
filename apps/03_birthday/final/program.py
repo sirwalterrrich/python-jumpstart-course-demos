@@ -20,6 +20,7 @@ def get_birthday_from_user():
 
 def compute_days_between_dates(original_date, target_date):
     this_year = datetime.date(target_date.year, original_date.month, original_date.day)
+    print("Today's date:"+ str(target_date))
 
     dt = this_year - target_date
     return dt.days
@@ -34,12 +35,18 @@ def print_birthday_information(days):
         print("Happy birthday!!!")
 
 
+def tell_me_awesome():
+    print("You are Awesome!!")
+
+
 def main():
     print_header()
     bday = get_birthday_from_user()
     today = datetime.date.today()
     number_of_days = compute_days_between_dates(bday, today)
     print_birthday_information(number_of_days)
+    tell_me_awesome()
+    print("Birthday:"+ str(bday))
 
 
 main()
